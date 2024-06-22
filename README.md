@@ -1,6 +1,14 @@
 # QbhFrontend
 
+git clone <repo>
+npm i
+ng serve
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+
+Here we are using
+1. bootstrap cd for styling
+2. jspdf and jspdf-autotable for table.pdf generation
 
 ## Development server
 
