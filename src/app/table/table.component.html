@@ -13,7 +13,7 @@
             <ng-container *ngIf="users.length > 0; else no_record_found">
                 <tr *ngFor="let user of users">
                     
-                        <td>{{user.id}} - {{ user.name }}</td>
+                        <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.phone }}</td>
                         <td>{{ user.address }}</td>
