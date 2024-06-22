@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <table class="table table-striped">
+        <thead class="table-primary">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="users.length > 0; else no_record_found">
+                <tr *ngFor="let user of users">
+                    
+                        <td>{{user.id}} - {{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.address }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning" (click)="editUser(user)">Edit</button>&nbsp;
+                            <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">Delete</button>
+                        </td>
+                </tr>
+            </ng-container>
+            <ng-template #no_record_found>
+                <tr style="height: 100%; width: 100%; text-align: center;">
+                    <td colspan="5">No Record Found</td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+    <button class="btn btn-secondary" (click)="generatePDF()">Generate PDF</button> &nbsp;
+    <button class="btn btn-secondary" (click)="downloadPDF()">Download PDF</button>
+</div>
